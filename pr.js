@@ -3,13 +3,11 @@ new Promise(function(resolve, reject) {
 })
   .then(function(result) {
     // (**)
-
     console.log(result); // 1
     return result * 2;
   })
   .then(function(result) {
     // (***)
-
     console.log(result); // 2
     return result * 2;
   })
