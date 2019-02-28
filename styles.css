@@ -1,0 +1,92 @@
+@media (max-width: 10000px) {
+  * {
+    color: rgb(30, 255, 0);
+  }
+}
+
+@keyframes box-move {
+  from {
+    color: red;
+  }
+  to {
+    color: blue;
+  }
+}
+
+p.new::after {
+  content: "New!"; /* Добавляемый текст */
+  color: #333; /* Цвет текста */
+  background-color: #fc0; /* Цвет фона */
+  font-size: 90%; /* Размер шрифта */
+  padding: 2px; /* Поля вокруг текста */
+}
+
+.box {
+  animation-duration: 1s;
+  animation-name: box-move;
+}
+
+#search-results .search-content .search-content li:hover {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-end li {
+  background: gold;
+}
+
+.center {
+  justify-content: center;
+}
+.center li {
+  background: deepskyblue;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.space-between li {
+  background: lightgreen;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+.space-around li {
+  background: hotpink;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+.space-evenly li {
+  background: #bada55;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 60px;
+  height: 50px;
+  margin: 5px;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
