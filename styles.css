@@ -1,12 +1,15 @@
 @media (max-width: 10000px) {
   * {
-    color: rgb(30, 255, 0);
+    color: rgb(235, 241, 234);
   }
 }
 
 @keyframes box-move {
   from {
     color: red;
+  }
+  50% {
+    color: rgb(0, 255, 34);
   }
   to {
     color: blue;
@@ -22,7 +25,7 @@ p.new::after {
 }
 
 .box {
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-name: box-move;
 }
 
