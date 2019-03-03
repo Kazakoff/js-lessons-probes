@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      p::first-line {
+        color: rgb(108, 216, 46);
+      }
+      p::first-letter {
+        color: rgb(187, 25, 25);
+      }
+      /*   a::before {
+        content: "hello world";
+      }
+      */
+      .color-before::before {
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Как видите, все они указывают только на часть элемента: на первую строку
+      или первую букву параграфа, например. Они также обладают замечательной
+      способностью определять и даже добавлять вещи, которые даже не указаны в
+      HTML, а именно это :before и :after, то что сегодня мы и обсуждаем.
+    </p>
+    <a> ffff </a>
+    <a class="color-before"> ffff </a>
+  </body>
+</html>

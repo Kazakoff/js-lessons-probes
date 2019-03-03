@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <style type="text/css">
+      select {
+        -webkit-appearance: none;
+        width: 150px;
+        z-index: 2;
+      }
+      .select-wrap::after {
+        content: "▼";
+        position: absolute;
+        left: 140px;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="select-wrap">
+      <select size="1" name="hero">
+        <option disabled>Выберите героя</option>
+        <option value="Чебурашка">Чебурашка</option>
+        <option selected value="Крокодил Гена">Крокодил Гена</option>
+        <option value="Шапокляк">Шапокляк</option>
+        <option value="Крыса Лариса">Крыса Лариса</option>
+      </select>
+    </div>
+  </body>
+</html>

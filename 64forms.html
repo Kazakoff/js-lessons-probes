@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <style  type="text/css">
+    input[type="radio"] + label {
+         color: blue;
+       }
+       input[type="radio"] {
+           opacity: 0;
+       } 
+      input[type="radio"] + label::before {
+         content: "\00a0";
+       }   
+       input[type="radio"]:checked+label::before {
+        content: "\02a0";
+      } 
+
+    </style>
+  </head>
+  <body>
+    <form>
+      <input name="lst" type="radio" id="r1" />
+      <label for="r1">1111</label> </br>
+      <input name="lst" type="radio" id="r2"/>
+      <label for="r2">222</label></br>
+      <input name="lst" type="radio" id="r3"/>
+      <label for="r3">333</label></br>
+      <input name="lst" type="radio" id="r4"/>
+      <label for="r4">444</label>
+    </form>
+  </body>
+</html>
