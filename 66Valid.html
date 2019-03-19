@@ -1,27 +1,33 @@
 <html>
-  <head>
-    <style type="text/css">
-      input:valid {
-        border-color: chartreuse;
-      }
-      input[type="number"]:out-of-range {
-        border-color: rgb(55, 0, 255);
-      }
-      input:invalid {
-        border-color: rgb(255, 72, 0);
-      }
-      input:read-only {
-        border-color: rgb(0, 225, 255);
-      }
-    </style>
-  </head>
-  <body>
-    <form>
-      <input type="text" required />
-      <input type="text" pattern="2-[0-9]{3}-[0-9]{3}" />
-      <input type="number" min="10" max="20" />
-      <input type="text" readonly />
-      <input type="submit" />
-    </form>
-  </body>
+
+<head>
+  <style type="text/css">
+    input:valid {
+      border-color: chartreuse;
+    }
+
+    input[type="number"]:out-of-range {
+      border-color: rgb(55, 0, 255);
+    }
+
+    input:invalid {
+      border-color: rgb(255, 72, 0);
+    }
+
+    input:read-only {
+      border-color: rgb(0, 225, 255);
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <input type="text" required />
+    <input type="text" pattern="2-[0-9]{3}-[0-9]{3}" />
+    <input type="number" min="10" max="20" />
+    <input type="text" readonly />
+    <input type="submit" />
+  </form>
+</body>
+
 </html>
