@@ -1,0 +1,23 @@
+{
+  "name": "js-lessons-probes",
+  "version": "1.0.0",
+  "description": "Lessons probes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kazakoff/js-lessons-probes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kazakoff/js-lessons-probes/issues"
+  },
+  "homepage": "https://github.com/Kazakoff/js-lessons-probes#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
