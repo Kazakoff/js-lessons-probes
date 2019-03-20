@@ -1,3 +1,6 @@
+var fff = { e: 33 };
+console.log({ d: 33 });
+
 var obj = {
   a: 1,
   f: function() {
