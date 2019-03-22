@@ -1,7 +1,9 @@
-var customerName = "Foo";
-var card = { amount: 7, product: "Bar", unitprice: 42 };
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-unused-vars */
+const customerName = 'Foo';
+const card = { amount: 7, product: 'Bar', unitprice: 42 };
 
-var message = `Hello ${customerName},
+const message = `Hello ${customerName},
 want to buy ${card.amount} ${card.product} for
 a total of ${card.amount * card.unitprice} bucks?`;
 
@@ -16,4 +18,4 @@ function get(strings, ...params) {
 
 get`http://example.com/foo?bar=${11 + 10}&quux=${20 * 2}`;
 
-console.log(String.raw`foo\n${42}bar` === "foo\\n42bar");
+console.log(String.raw`foo\n${42}bar` === 'foo\\n42bar');

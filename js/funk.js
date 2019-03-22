@@ -1,12 +1,12 @@
-var fff = { e: 33 };
+const fff = { e: 33 };
 console.log({ d: 33 });
 
-var obj = {
+const obj = {
   a: 1,
-  f: function() {
-    console.log("test");
+  f() {
+    console.log('test');
   }
 };
 for (key in obj) {
-  console.log(key + ": " + obj[key]);
+  console.log(`${key}: ${obj[key]}`);
 }

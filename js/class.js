@@ -1,4 +1,4 @@
-"use strict";
+
 
 class Point {
   constructor(x, y) {
@@ -10,15 +10,19 @@ class Point {
     this.X += dx;
     this.Y += dy;
   }
+
   get X() {
     return this.x;
   }
+
   set X(nx) {
     if (nx > 0) this.x = nx;
   }
+
   get Y() {
     return this.y;
   }
+
   set Y(ny) {
     if (ny > 0) this.y = ny;
   }
@@ -29,12 +33,13 @@ class Circle extends Point {
     super(x, y);
     this.r = r;
   }
+
   move(dx, dy, dr) {
     super.move(dx, dy);
     this.r = dr;
   }
 }
-var c1 = new Circle(1, 2, 3);
+const c1 = new Circle(1, 2, 3);
 c1.X = 2;
 console.log(c1);
 c1.X = -2;

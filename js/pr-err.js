@@ -1,14 +1,15 @@
-
-
-somePromise().then(function () {
+somePromise()
+  .then(function() {
     return someOtherPromise();
-}).catch(function (err) {
+  })
+  .catch(function(err) {
     // handle error​
+  });
 
-});
-
-somePromise().then(function () {
+somePromise()
+  .then(function() {
     return someOtherPromise();
-}).then(null, function (err) {
+  })
+  .then(null, function(err) {
     //   handle error​
-}); 
+  });
