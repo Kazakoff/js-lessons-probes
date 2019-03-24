@@ -2,7 +2,6 @@ const coord = {
   country: 'RB',
   address: {
     street: 'Mosk',
-    zip: 1234,
     stores: [
       { name: '#1', storeInfo: 'магазин 111' },
       { name: '#2', storeInfo: 'магазин 222' }
@@ -10,19 +9,18 @@ const coord = {
   }
 };
 
-function getCurrentCoords(coord1, treatAddress) {
-  console.log(coord1.country);
-  treatAddress(coord1.address);
+function getCurrentCoords(coord, treatAddress) {
+  console.log(coord.country);
+  treatAddress(coord.address);
 }
 
-function getAddress(address, treatStores) {
+function getAddress(address, treatSZip) {
   console.log(address.street);
-  treatStores(address.stores);
+  treatSZip(address);
 }
 
 function getStores(address, treatStores) {
-  console.log(address.street);
-  treatStores(address);
+  treatStores(address.stores);
 }
 
 function getStoreinfo(store, treatStoreInfo) {
@@ -30,11 +28,11 @@ function getStoreinfo(store, treatStoreInfo) {
   treatStoreInfo(store.storeInfo);
 }
 
-getCurrentCoords(coord, function(coords) {
-  getAddress(coords, function(address) {
-    getStores(address, function(stores) {
-      stores.forEach(function(store) {
-        getStoreinfo(store, function(storeInfo) {
+getCurrentCoords(coord, function (coords) {
+  getAddress(coords, function (address) {
+    getStores(address, function (stores) {
+      stores.forEach(function (store) {
+        getStoreinfo(store, function (storeInfo) {
           console.log(storeInfo);
         });
       });
