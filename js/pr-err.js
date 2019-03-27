@@ -1,31 +1,31 @@
 /* eslint-disable no-use-before-define */
 getCurrentCoords()
-  .then(function (coords) {
+  .then(function(coords) {
     return getAddress(coords);
   })
-  .then(function (address) {
+  .then(function(address) {
     return getZip(address);
   })
-  .catch(function (error) {
+  .catch(function(error) {
     console.log(`Error is ${error}`);
     return getSomethingElse();
   })
-  .then(function (result) {
+  .then(function(result) {
     console.log(result);
-    throw new Error(result);
+    if (result.thing) throw new Error(result);
   })
-  .catch(function (error) {
+  .catch(function(error) {
     console.log('want coords, but get something like this', error);
   });
 
 const coord = {
   country: 'RB',
   address: {
-    street: 'Mosk',
+    steet: 'Mosk',
     zip: 234323,
     stores: [
-      { name: '#1', storeInfo: '??????? 111' },
-      { name: '#2', storeInfo: '??????? 222' }
+      { name: '#1', storeInfo: 'store # 111' },
+      { name: '#2', storeInfo: 'store # 222' }
     ]
   }
 };
@@ -35,8 +35,8 @@ const somethingElse = {
 };
 
 function getCurrentCoords() {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
       if (coord.country) {
         console.log(coord.country);
         resolve(coord.address);
@@ -46,8 +46,8 @@ function getCurrentCoords() {
 }
 
 function getAddress(address) {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
       if (address.street) {
         console.log(address.street);
         resolve(address);
@@ -59,7 +59,7 @@ function getZip(address) {
   if (address.zip) {
     console.log(address.zip);
   } else throw new Error('no zip');
-  /*
+
   return new Promise(function(resolve, reject) {
     setTimeout(function() {
       if (address.zip) {
@@ -68,13 +68,19 @@ function getZip(address) {
       } else reject(new Error('no zip'));
     }, 200);
   });
-  */
 }
 
 function getSomethingElse() {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(somethingElse.thing);
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      resolve(somethingElse);
     }, 200);
   });
 }
+
+/*
+RB
+Error is Error: no street
+some
+want coords, but get something like this Error: some
+*/

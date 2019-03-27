@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/js/pr-err.js"
+      "program": "${workspaceFolder}/js/gen2.js"
     },
     {
       "type": "chrome",

@@ -1,6 +1,6 @@
-let dst = { asd: 0 };
-let src1 = { foo: 1, bar: 2 };
-let src2 = { foo: 3, baz: 4 };
+const dst = { asd: 0 };
+const src1 = { foo: 1, bar: 2 };
+const src2 = { foo: 3, baz: 4 };
 
 Object.assign(dst, src1, src2);
 
@@ -38,3 +38,6 @@ const copy = Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
 );
+
+console.log(Object.values(obj));
+console.log(Object.entries(obj));

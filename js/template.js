@@ -18,4 +18,4 @@ function get(strings, ...params) {
 
 get`http://example.com/foo?bar=${11 + 10}&quux=${20 * 2}`;
 
-console.log(String.raw`foo\n${42}bar` === 'foo\\n42bar');
+// console.log(String.raw`foo\n${42}bar` === 'foo\\n42bar');
